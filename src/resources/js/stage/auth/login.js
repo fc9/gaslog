@@ -25,6 +25,7 @@ module.exports = {
                 })
                 .catch(({ response  }) => {
                     const { status, data } = response
+                    console.log(data)
 
                     // validação Google
                     if(data.message === 'Você ainda não possui uma conta cadastrada.'){

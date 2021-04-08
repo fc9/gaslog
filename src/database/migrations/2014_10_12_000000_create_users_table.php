@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->string('provider')->nullable();
             $table->tinyInteger('level')->unsigned()->default(1)->comments("TIPO DE USUARIO: ENUM 1 - USER, 2 - ADMIN, 3 - AVALIADOR, 4 - ROOT");
             $table->rememberToken();
+            $table->softDeletes('deleted_at', 0);
             $table->timestamps();
         });
     }

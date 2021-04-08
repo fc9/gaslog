@@ -28,6 +28,8 @@ class AuthServiceProvider extends ServiceProvider
             }
         });
 
+        return true;
+
         #I have no idea what that is
         Gate::define('update-project', 'App\Policies\ProjectPolicy@update');
         Gate::define('delete-project', 'App\Policies\ProjectPolicy@delete');
