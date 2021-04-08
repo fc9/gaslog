@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <defs>
+        <path d="M4.1291862,9.17911764 L0.337519531,5.38745097 C0.109723307,5.15965474 0.109723307,4.79030904 0.337519531,4.56249003 L1.16245768,3.73752909 C1.39025391,3.50971008 1.7596224,3.50971008 1.98741862,3.73752909 L4.54166667,6.29175435 L10.0125814,0.820862427 C10.2403776,0.593066203 10.6097461,0.593066203 10.8375423,0.820862427 L11.6624805,1.64582336 C11.8902767,1.87361959 11.8902767,2.24296529 11.6624805,2.4707843 L4.95414714,9.17914042 C4.72632812,9.40693665 4.35698242,9.40693665 4.1291862,9.17911764 L4.1291862,9.17911764 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Projeto-inscrito" transform="translate(-24.000000, -31.000000)">
+            <g id="Projeto-inscrito-1">
+                <g id="Group" transform="translate(24.000000, 31.000000)">
+                    <circle id="Oval" fill="#B7CF44" cx="11" cy="11" r="11"></circle>
+                    <g id="Icons/Solid/check" transform="translate(5.000000, 6.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="check" fill="#FFFFFF" fill-rule="nonzero" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

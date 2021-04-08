@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="31px" viewBox="0 0 25 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Agrupar_2</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Projeto-inscrito" transform="translate(-89.000000, -27.000000)">
+            <g id="Projeto-inscrito-1">
+                <g id="Agrupar_2" transform="translate(89.000000, 27.000000)">
+                    <path d="M7.63636364,3.33333333 L19.6363636,3.33333333 C22.0463335,3.33333333 24,5.32317889 24,7.77777778 L24,25.5555556 C24,28.0101544 22.0463335,30 19.6363636,30 L7.63636364,30 C5.22639382,30 3.27272727,28.0101544 3.27272727,25.5555556 L3.27272727,7.77777778 C3.27272727,5.32317889 5.22639382,3.33333333 7.63636364,3.33333333 Z" id="Retângulo_Arredondado_2" stroke="#000000" stroke-width="2" fill="#FFFFFF"></path>
+                    <rect id="Retângulo_Arredondado_2-2" fill="#B7CF44" fill-rule="nonzero" style="mix-blend-mode: multiply;" x="0" y="0" width="20.7272727" height="26.6666667" rx="4"></rect>
+                    <line x1="7.63636364" y1="13.3333333" x2="15.2727273" y2="13.3333333" id="Forma_6" stroke="#000000" stroke-width="2" fill="#FFC828" stroke-linecap="round"></line>
+                    <line x1="7.63636364" y1="17.7777778" x2="19.6363636" y2="17.7777778" id="Forma_6-2" stroke="#000000" stroke-width="2" fill="#FFC828" stroke-linecap="round"></line>
+                    <path d="M7.63636364,22.2222222 L12,22.2222222 M15.5727273,22.2222222 L19.6363636,22.2222222" id="Forma_6-3" stroke="#000000" stroke-width="2" fill="#FFC828" stroke-linecap="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

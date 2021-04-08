@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="37px" height="35px" viewBox="0 0 37 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 3</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Cabeçalho-Inscrição-V1" transform="translate(-1013.000000, -123.000000)">
+            <g id="Inscrição-texto">
+                <g id="Data" transform="translate(963.000000, 75.000000)">
+                    <g id="1">
+                        <g id="Calendário" transform="translate(38.000000, 36.000000)">
+                            <g id="Group-3" transform="translate(12.000000, 12.000000)">
+                                <rect id="Retângulo_11" fill="#B7CF44" fill-rule="nonzero" x="4" y="6" width="33" height="9"></rect>
+                                <image id="Camada_9" x="0" y="0" width="35" height="35" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAABGdBTUEAALGOfPtRkwAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAI6ADAAQAAAABAAAAIwAAAAC4vEOnAAAFy0lEQVRYCb1YWyylVxRexznu9yqTcRtKyBC96aTENJEQNIgglIjMg4e+Njw08YCo4oFUn/VNmmjDEKGKhsRl4q4EUUzGrSaM+/16Tte3a5+iHOcYYyX/2fvf//7X+va3Lnv/hzQaDbW0tFBhYSFFR0eTiYkJVVZW0vj4OGVnZ39tbm4+l5eX92xoaIgqKirEc9JToG9iYoK6u7ttvb29e319fV+wWI+OjlJ4eDg9ePCAMjMzqbS0lEZGRogkmKKiIoqLixNmLC0tBTA3N7efeUDD109mZmZ6Qrg4zd3dnVxcXHzO9GiioqLc/f39xSQvLy/KysrSglFhFGwYGRnR8fHx+3xrtru7S+3t7cSsmOC5QqEwPTg4cEXfUJmbm8MrLnxp2M7J2NiY6/z8vBqDp6enar5WTU1ND9nGv8yUl5d/7uPj8zsPrvKc3XPXMffBDNrz44b29870QBf64n0GsO3g4PAXuzObQSqpo6PjMxsbm005WalUapgljUqlEi3G0Tc2Nhb3eGbIBX3MCECIS+qFDjmGNiMj40dFSEjIb11dXV/6+fmNcf9bfvA34uPk5IQaGhq+Y5pj7OzsquLj479n0HAlT9FPQD1CoLOz84O+vr4qvj+JjY1N8PDwWGD3QJfx69evUxobGzPZ3o6KI/0JVKempmY6OTk1w8dQMj09DZ++wbONjY3l5ubmP9PS0kQGQJE+wqyI2GMg25gPNnZ2dgbVavXiw4cPxYIjIiL6OHMjXr586a1ixcYw3traumJra0uYBOH4warMz/pmYIrnEGeDeI4s1CXsVpqcnKTBwUHiuDBdXV1VsC0Te3t7kSB8T4uLiyKl9/b2lliXD7JJalXC4Pb2tkg3R0dH1JtfysrK3IqLi6tiYmJoc3NTGFhYWCCs+joBUCwmISGBSkpK6PDwcCY9Pf3Xo6Oj04KCgkUrKyuqqakRQEAAzzeCLpHa6DB1aCggIAAv0/7+PgUHB9cuLS3VhoWFESui5eVlEQNcwMRcXT8ABPAA5enpuccB+tXa2hpZWFgQWOEaRs7OzrS+vq5Vw8lN6+wmu9DQ0I8SExNHgoKChGEoA0BMBktgDe5kv2tfvqkDHYgvBPHW1pbQhySAXoAEuOfPn4OlP3ihXwg34SVXV9cPOWuUw8PDoipLQ3AHsyOAyDFDW+iXboWLpQDk48ePqa6uzobH1GAGhe49rFi6Sk6+jxZsQxjwmjZmeD/a4bFTrOI+hYsgcbpbchgoAEYEQVJSUkJycvIQitp9MYS44X2KcnNzazjNnwhmQBXXhJXe3t4VbO0Ag0tSeNdMgX1U+ZmZGWpra0NyHLENwYywxXShGou0RmHDC/pWWkPBgpGpqSlRa1AyOF5F4GjzFCxg0sDAADU1NYkUNiSN9QUEG69evRJAUMsQM1K0YDAgAfX39wtAuL9LQAAyw65B9eUt4AIQ2P8PFu7OBPnPm5sAxxuZGH3boAaQ2dlZqq6uJj6oEfauy3IlGMkQB7SIncjIyLcCdBnIedecB3QlGEyQgOAyyG0ByRipra0V+911QGDjWjB4eBUguFDfwogtgM8p2hi5yjWwI0UnGDkJAJBlSMNHjx7plfJYCOb39PQIRm4CAlt6gUFGYZX8zSNObjCkj4BBa2trwqePPmzeCAaGcXzg/UOkOWLAEMHZCDpwjrkJ0IU6c9nIeSC33R6gA6mMAoe+LrkWzF0AkYahC2BQ6HQBuhIMXsC+BNfclhEJRLbQCYZ0AfpfzOAlGSN3BeQyINxfFUNaMHyO0QAEguwuGZFAZCsZQotkQPqzTXGi07opMDBQjfMoTvR3zYgEIlsAwZ8LqD1Pnz4l/nQRpBjx3xWLAMYB9oz/vjBCrKBko668ywuA4Cq2/yl/JXzMQE8U+fn53+Tk5PwA1Px5O8asvDljTS7knbXMjIo/YQI5qM35v5pRnOxUKSkpZYx0ha3i74rDe7wO2NYmkzBUX1//yT9MeEbHxEKNLwAAAABJRU5ErkJggg=="></image>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

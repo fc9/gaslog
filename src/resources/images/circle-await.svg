@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <defs>
+        <path d="M3.39285714,9.375 L1.46428571,9.375 C0.931919643,9.375 0.5,8.95507812 0.5,8.4375 L0.5,1.5625 C0.5,1.04492188 0.931919643,0.625 1.46428571,0.625 L3.39285714,0.625 C3.92522321,0.625 4.35714286,1.04492188 4.35714286,1.5625 L4.35714286,8.4375 C4.35714286,8.95507812 3.92522321,9.375 3.39285714,9.375 Z M9.5,8.4375 L9.5,1.5625 C9.5,1.04492188 9.06808036,0.625 8.53571429,0.625 L6.60714286,0.625 C6.07477679,0.625 5.64285714,1.04492188 5.64285714,1.5625 L5.64285714,8.4375 C5.64285714,8.95507812 6.07477679,9.375 6.60714286,9.375 L8.53571429,9.375 C9.06808036,9.375 9.5,8.95507812 9.5,8.4375 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Projeto-pendente" transform="translate(-24.000000, -31.000000)">
+            <g id="Projeto-1">
+                <g id="Group" transform="translate(24.000000, 31.000000)">
+                    <circle id="Oval" fill="#F5644B" cx="11" cy="11" r="11"></circle>
+                    <g id="Icons/Solid/pause" transform="translate(6.000000, 6.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="pause" fill="#FFFFFF" fill-rule="nonzero" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

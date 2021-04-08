@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="16px" viewBox="0 0 8 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Path</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="Botões-Fundo-Cinza" transform="translate(-1339.000000, -496.000000)" stroke="#7B3B83">
+            <g id="Fundo-Cinza">
+                <g transform="translate(72.000000, 86.000000)" id="Com">
+                    <g transform="translate(53.000000, 347.000000)">
+                        <g id="Voltar" transform="translate(1188.000000, 45.000000)">
+                            <path d="M38,31 L30.3076923,31 C29.033189,31 28,29.966811 28,28.6923077 L28,21" id="Path" transform="translate(33.000000, 26.000000) scale(-1, 1) rotate(-135.000000) translate(-33.000000, -26.000000) "></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

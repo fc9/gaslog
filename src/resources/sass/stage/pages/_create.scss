@@ -1,0 +1,158 @@
+.create {
+    @include media("<tablet") {
+        padding-bottom: 73px;
+    }
+    &__wrapper {
+        max-width: 700px;
+        margin: 16px auto 0px;
+        border-radius: 10px;
+        position: relative;
+        transition: 0.3s ease-in-out;
+
+        &__flex {
+            display: flex;
+            .radio {
+                p {
+                    margin-bottom: 0px !important;
+                }
+            }
+            @include media("<tablet") {
+                display: block;
+                .radio {
+                    display: flex;
+                    width: 138px;
+                    align-items: center;
+                    margin: 0px auto;
+
+                    &:last-child {
+                        margin-top: 16px;
+                    }
+                    p {
+                        text-transform: uppercase;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+        &.first {
+            padding: 20px 15px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            display: block;
+            background-color: $primary;
+            border-radius: 33px;
+            color: $color-white;
+
+            @include media(">=tablet") {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                max-height: 66px;
+                margin-top: 12px;
+                margin-bottom: initial;
+            }
+            p,
+            label {
+                margin-bottom: initial;
+            }
+            p {
+                @include media("<tablet") {
+                    text-align: center;
+                    margin-bottom: 24px;
+                }
+            }
+        }
+
+        &--disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0px;
+                left: 0px;
+            }
+        }
+    }
+
+    &__or {
+        margin: 40px 0px;
+        text-align: center;
+        position: relative;
+        @include media(">=tablet") {
+            margin: 16px 0px 0px;
+        }
+
+        p {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 21px;
+        }
+
+        &::after,
+        &::before {
+            content: "";
+            width: calc(50% - 30px);
+            height: 1px;
+            background: $color-black;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-1px);
+        }
+
+        &::before {
+            left: 0;
+        }
+
+        &::after {
+            right: 0px;
+        }
+    }
+
+    &__social,
+    &__email {
+        &__wrapper {
+            margin-top: 24px;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 23px;
+
+            @include media(">=tablet") {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .form-group {
+                margin-bottom: 0px;
+            }
+        }
+    }
+
+    &__social {
+        text-align: center;
+        p {
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+    }
+
+    &__email {
+        button {
+            font-weight: 700;
+            max-width: 336px;
+            margin: 29px auto 0px;
+        }
+
+        .form {
+            p {
+                margin-bottom: 8px;
+            }
+            .create__email__wrapper {
+                margin-top: 0px;
+            }
+        }
+    }
+}

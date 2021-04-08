@@ -1,0 +1,871 @@
+.form {
+    &-group {
+        margin-bottom: 20px;
+        display: block;
+
+        &__schools-type {
+            margin-top: 20px;
+            display: none;
+        }
+
+        &--start {
+            align-self: flex-start;
+        }
+
+        &--topMargin {
+            align-self: flex-start;
+            position: relative;
+            padding-bottom: 30px;
+
+            @include media(">=tablet") {
+                transform: translateY(17px);
+                padding-bottom: initial;
+            }
+
+            .form-group__error__msg {
+                position: absolute;
+            }
+        }
+
+        p {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px;
+            &.font-normal {
+                font-weight: normal;
+            }
+        }
+
+        &__error {
+            input,
+            textarea,
+            .select__selected label {
+                border-color: $color-red;
+                box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+            }
+            .form-group__error__msg {
+                display: block !important;
+            }
+        }
+    }
+
+    &__buttons {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        justify-content: flex-end;
+        padding: 24px 0;
+        border-top: 1px solid RGBA(0, 0, 0, 0.25);
+
+        @include media("<tablet") {
+            grid-template-areas: "btnContinuar" "btnSalvar";
+        }
+
+        @include media(">=tablet") {
+            grid-template-columns: 260px 218px;
+        }
+
+        &--step2 {
+            grid-template-columns: 1fr;
+
+            @include media("<tablet") {
+                grid-template-areas: "btnContinuar" "btnSalvar" "btnVoltar";
+            }
+
+            @include media(">=tablet") {
+                grid-template-columns: 1fr 260px 218px;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        &__save,
+        &__continue,
+        &__back {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &::after,
+            &::before {
+                font-family: "icomoon" !important;
+                font-size: 16px;
+                margin-left: 16px;
+            }
+        }
+
+        &__back {
+            max-width: 152px;
+
+            @include media("<tablet") {
+                grid-area: btnVoltar;
+                max-width: 100%;
+            }
+
+            &::before {
+                content: "\e901";
+                margin-right: 10px;
+                transform: rotate(180deg);
+                display: inline-block;
+                margin-left: -5px;
+            }
+        }
+
+        &__save {
+            @include media("<tablet") {
+                grid-area: btnSalvar;
+            }
+
+            small {
+                font-size: 12px;
+                font-weight: 400;
+                text-transform: initial;
+                margin-left: 10px;
+            }
+
+            &::before {
+                content: "\e908";
+                margin-right: 10px;
+                margin-left: initial;
+            }
+
+            @include media(">=tablet") {
+                &:hover {
+                    background-color: $color-white;
+                    border-color: $color-white;
+                    color: $vermelho;
+                }
+            }
+        }
+
+        &__continue {
+            border: 0px none;
+
+            @include media("<tablet") {
+                grid-area: btnContinuar;
+            }
+
+            &::after {
+                content: "\e901";
+            }
+        }
+
+        &__finish {
+            padding: 14px 0 16px;
+        }
+    }
+
+    &-item {
+        margin-bottom: 50px;
+        display: block;
+
+        hr {
+            width: 100%;
+            height: 1px;
+            background-color: RGBA(0, 0, 0, 0.25);
+            border: 0px none;
+            margin: 50px 0 10px;
+        }
+
+        h4 {
+            color: $vermelho;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 27px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+
+            @include media(">=tablet") {
+                font-size: 20px;
+            }
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 22px;
+
+            strong {
+                font-weight: 700;
+            }
+
+            small {
+                display: block;
+                color: #797a7b;
+                font-size: 14px;
+                line-height: 16px;
+            }
+        }
+
+        &__group {
+            .subitens {
+                display: none;
+            }
+
+            .subitens-radio {
+                display: none;
+            }
+        }
+
+        &__upload {
+            margin-top: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid RGBA(0, 0, 0, 0.25);
+
+            &--noborder {
+                border-bottom: 0px none;
+                padding-bottom: 0px;
+
+                p {
+                    font-weight: 400;
+                }
+            }
+
+            &__item {
+                margin-top: 20px;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-gap: 10px;
+
+                @include media(">=tablet") {
+                    grid-template-columns: repeat(4, 170px);
+                }
+
+                &--border-small {
+                    margin-top: -10px;
+                }
+
+                &__image {
+                    &__wrapper {
+                        width: 170px;
+                        height: 170px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 8px;
+                        overflow: hidden;
+                        border: 2px dashed RGBA(0, 0, 0, 0.25);
+
+                        img {
+                            max-width: 100%;
+                            max-height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .btn__removeUpload {
+                        margin-top: 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0px !important;
+                    }
+                }
+
+                &__document {
+                    &__wrapper {
+                        width: 170px;
+                        height: 170px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 8px;
+                        overflow: hidden;
+                        border: 2px dashed RGBA(0, 0, 0, 0.25);
+
+                        img {
+                            max-width: 100%;
+                            max-height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    &__title {
+                        display: block;
+                        font-size: 12px;
+                        font-weight: bold;
+                        text-align: center;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                    .btn__removeUpload {
+                        margin-top: 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+
+                &__btn {
+                    width: 170px;
+                    height: 170px;
+                    border: 2px dashed RGBA(0, 0, 0, 0.25);
+                    border-radius: 8px;
+                    display: flex !important;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    cursor: pointer;
+                    position: relative;
+                    transition: 0.3s ease-in-out;
+
+                    @include media(">=tablet") {
+                        &:hover {
+                            background-color: $color-yellow;
+                            color: $color-black;
+                            border-color: $color-black;
+                        }
+                    }
+
+                    p {
+                        max-width: 110px;
+                        margin-top: 8px;
+                    }
+
+                    i {
+                        font-size: 30px;
+                    }
+
+                    input {
+                        display: none;
+                        appearance: none;
+                    }
+                }
+            }
+        }
+
+        &__textarea {
+            &.spaced {
+                margin-bottom: 75px;
+            }
+
+            &__title {
+                text-align: left !important;
+                margin-top: 20px;
+                margin-bottom: 10px;
+                // max-width: 635px;
+                font-size: 16px !important;
+                line-height: 19px !important;
+            }
+
+            textarea {
+                &.medium {
+                    height: 107px;
+                }
+
+                &.large {
+                    height: 200px;
+
+                    @include media(">=tablet") {
+                        height: 355px;
+                    }
+                }
+            }
+
+            p {
+                font-size: 14px;
+                text-align: right;
+                font-weight: 700;
+            }
+        }
+
+        &__state {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 21px;
+            margin-top: 25px;
+
+            @include media(">=tablet") {
+                grid-template-columns: 165px 1fr;
+            }
+        }
+
+        &__escola {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 15px;
+
+            @include media(">=tablet") {
+                grid-template-columns: repeat(4, 1fr);
+                grid-gap: 21px;
+            }
+
+            .select__selected::after {
+                top: 50%;
+            }
+
+            label {
+                display: block;
+
+                &.select__options--schools-subitem {
+                    display: none;
+                }
+
+                .select__selected input {
+                    margin-top: 0px !important;
+                }
+            }
+
+            @include media(">=tablet") {
+                &--nome {
+                    grid-column: span 2;
+                }
+
+                &--tipo {
+                    grid-column: span 2;
+                }
+
+                &--subtipo {
+                    grid-column: span 4;
+                }
+
+                &--cep {
+                    grid-column: span 1;
+                }
+
+                &--estado {
+                    grid-column: span 1;
+                }
+
+                &--cidade {
+                    grid-column: span 2;
+                }
+
+                &--endereco {
+                    grid-column: span 2;
+                }
+
+                &--numero {
+                    grid-column: span 2;
+                }
+
+                &--complemento {
+                    grid-column: span 2;
+                }
+
+                &--telefone {
+                    grid-column: span 2;
+                }
+            }
+
+            .box-repeater--remove {
+                justify-self: center;
+
+                @include media(">=tablet") {
+                    justify-self: flex-end;
+                    grid-column: span 4;
+                }
+            }
+        }
+
+        &__half {
+            &__wrapper {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-gap: 17px;
+                align-items: flex-end;
+
+                &--start {
+                    align-items: flex-start;
+                }
+
+                @include media(">=tablet") {
+                    grid-template-columns: repeat(2, 1fr);
+
+                    &--smaller {
+                        grid-template-columns: 35% 75%;
+                    }
+                }
+
+                &--hgap {
+                    grid-gap: 0 17px;
+                }
+            }
+        }
+    }
+}
+
+#appliedAt {
+    display: none;
+}
+
+#appliedInSchool,
+#appliedOutSchool {
+    &.disabled {
+        display: none;
+    }
+}
+
+.select {
+    position: relative;
+    transition: 0.3s ease-in-out;
+
+    &.disabled {
+        .select__selected {
+            label {
+                cursor: not-allowed;
+                opacity: 0.5;
+            }
+
+            &::after {
+                cursor: not-allowed;
+                opacity: 0.5;
+            }
+        }
+
+        .select__options {
+            display: none;
+        }
+    }
+
+    &__selected {
+        position: relative;
+        z-index: 7;
+
+        label {
+            display: block;
+            height: 52px;
+            cursor: pointer;
+            appearance: none;
+            outline: none;
+            width: 100%;
+            border: 1px solid $color-border;
+            background-color: $color-white;
+            border-radius: 10px;
+            padding: 10px 15px;
+            font-size: 1rem;
+            resize: none;
+
+            @include media(">=tablet") {
+                padding: 16px 27px;
+            }
+        }
+
+        input {
+            height: 0px;
+            width: 0px;
+            position: absolute;
+            z-index: -1;
+        }
+
+        &::after {
+            content: "\e902";
+            font-family: "icomoon" !important;
+            font-size: 8px;
+            position: absolute;
+            top: 50%;
+            right: 19px;
+            transform: translateY(-50%);
+            transition: 0.3s ease-in-out;
+            cursor: pointer;
+        }
+    }
+
+    &__options {
+        padding-top: 15px;
+        width: 100%;
+        background-color: $color-white;
+        position: absolute;
+        left: 0;
+        top: 35px;
+        z-index: 1;
+        list-style: none;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        transition: 0.3s ease-in-out;
+        max-height: 0;
+        overflow-y: scroll;
+
+        li {
+            padding: 15px 20px;
+            border-bottom: 1px solid $color-bg;
+            cursor: pointer;
+            &.hidden {
+                display: none;
+            }
+            @include media(">=tablet") {
+                &:hover {
+                    background-color: $color-yellow;
+                }
+            }
+        }
+    }
+
+    &--actived {
+        .select__selected {
+            z-index: 9;
+
+            label {
+                background-color: $color-yellow;
+            }
+
+            &::after {
+                transform: translateY(-50%) rotate(180deg);
+            }
+        }
+
+        .form-group__error__msg {
+            display: none !important;
+        }
+
+        .select__options {
+            z-index: 8;
+            max-height: 300px;
+        }
+    }
+
+    &--filter {
+        .select__options input {
+            margin: 5px;
+            outline: none;
+            max-width: calc(100% - 10px);
+        }
+    }
+}
+
+.radio {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 31px;
+    cursor: pointer;
+
+    span {
+        border: 2px solid $color-white;
+        background-color: $color-white;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        display: block;
+        margin-right: 9px;
+        position: relative;
+        transition: 0.3s ease-in-out;
+
+        &::after {
+            content: "";
+            width: 70%;
+            height: 70%;
+            background-color: $color-red;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border-radius: 50%;
+            transform: translateX(-50%) translateY(-50%) scale(0);
+            transition: 0.3s ease-in-out;
+        }
+    }
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+
+        &:checked ~ span {
+            // border-color: $primary;
+
+            &::after {
+                background-color: $primary;
+                transform: translateX(-50%) translateY(-50%) scale(1);
+            }
+        }
+    }
+}
+
+.radio-check,
+.checkbox-check {
+    margin-top: 19px;
+
+    label {
+        margin-bottom: 17px;
+        display: flex;
+        align-items: flex-start;
+        cursor: pointer;
+        margin-left: 35px;
+
+        @include media(">=tablet") {
+            margin-left: initial;
+        }
+
+        &.wrap {
+            flex-wrap: wrap;
+        }
+
+        @include media(">=tablet") {
+            &.absolute {
+                position: relative;
+
+                input[type="text"] {
+                    position: absolute;
+                    bottom: -10px;
+                    transform: translateY(100%);
+                }
+            }
+
+            &.absolute {
+                position: relative;
+
+                input[type="text"] {
+                    position: absolute;
+                }
+            }
+        }
+
+        span {
+            border: 2px solid $color-black;
+            border-radius: 8px;
+            width: 25px;
+            height: 25px;
+            display: block;
+            margin-right: 9px;
+            position: absolute;
+            transition: 0.3s ease-in-out;
+            left: 20px;
+
+            @include media(">=tablet") {
+                position: relative;
+                left: initial;
+            }
+
+            &::after {
+                content: url("/images/check.svg");
+                width: 18px;
+                height: 18px;
+                display: block;
+                position: absolute;
+                top: calc(50% - 5px);
+                left: calc(50% + 2px);
+                border-radius: 50%;
+                transform: translateX(-50%) translateY(-50%) scale(0);
+                transition: 0.3s ease-in-out;
+            }
+        }
+
+        p {
+            color: $color-black;
+            transition: 0.3s ease-in-out;
+            font-weight: normal;
+        }
+
+        input[type="text"] {
+            display: none;
+            margin-top: 5px;
+        }
+
+        input[type="hidden"],
+        textarea {
+            display: block;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+
+            &:checked {
+                & ~ span {
+                    border-color: $color-black;
+
+                    &::after {
+                        transform: translateX(-50%) translateY(-50%) scale(1);
+                    }
+                }
+
+                & ~ p {
+                    color: $color-black;
+                }
+
+                & ~ input[type="text"] {
+                    display: block;
+                }
+
+                & ~ input[type="hidden"],
+                & ~ textarea {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &.actived {
+        label {
+            span {
+                opacity: 0.25;
+            }
+
+            p {
+                opacity: 0.25;
+            }
+
+            input {
+                &:checked {
+                    & ~ span {
+                        opacity: 1;
+                    }
+
+                    & ~ p {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        .checkbox-check {
+            label {
+                span,
+                p {
+                    opacity: 1;
+                }
+
+                input {
+                    &:checked {
+                        & ~ span,
+                        & ~ p {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .subitens-radio {
+        p {
+            strong {
+                margin-top: -10px;
+                margin-bottom: 30px;
+                display: block;
+            }
+        }
+    }
+    .radio-check,
+    .checkbox-check {
+        margin-top: -17px;
+        margin-bottom: 17px;
+        label {
+            margin-bottom: initial;
+            margin-left: 32px;
+            @include media("<tablet") {
+                margin-left: 70px;
+                span {
+                    left: 50px;
+                }
+            }
+        }
+    }
+}
+
+.award_description {
+    display: none;
+}
+
+.subscription--completed {
+    .btn__removeUpload {
+        display: none !important;
+    }
+}

@@ -1,0 +1,595 @@
+.groups {
+    @include media(">=tablet") {
+        min-height: calc(100vh - 269px);
+    }
+    .addGroup {
+        @include media(">=tablet") {
+            background: url("/images/content/elements/bg-yellow.svg") right
+                center no-repeat;
+        }
+    }
+    &--new {
+        @include media(">=tablet") {
+            margin-bottom: 40px;
+        }
+    }
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 28px;
+        @include media(">=tablet") {
+            margin-top: 83px;
+            grid-template-columns: 1fr 1fr;
+            align-items: flex-end;
+        }
+    }
+    &__header {
+        margin: 30px 0 70px;
+        display: grid;
+        grid-template-areas: "groups-btn" "groups-title";
+        grid-gap: 40px;
+        @include media(">=tablet") {
+            margin: 90px 0;
+            grid-template-areas: "groups-title groups-btn";
+        }
+        h1 {
+            @extend %font-gloria;
+            color: $secundary;
+            position: relative;
+            grid-area: groups-title;
+            font-size: 40px;
+            line-height: 52px;
+            &::before {
+                content: url("/images/content/elements/bg-title-blue2-m.svg");
+                position: absolute;
+                top: -185px;
+                left: 173px;
+                z-index: -1;
+                transform: translateX(-100%);
+            }
+            @include media(">=tablet") {
+                font-size: 70px;
+                line-height: 109px;
+                &::before {
+                    content: url("/images/content/elements/bg-title-blue.svg");
+                    top: -231px;
+                    left: 400px;
+                }
+                &::after {
+                    content: url("/images/content/elements/balls-purple.svg");
+                    position: absolute;
+                    top: 104px;
+                    left: -20px;
+                }
+            }
+        }
+        a {
+            grid-area: groups-btn;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 210px;
+            margin: 0px auto;
+            @include media(">=tablet") {
+                margin: initial;
+                margin-left: auto;
+                max-width: 257px;
+                transform: translateY(-30px);
+            }
+            img {
+                margin-right: 24px;
+            }
+        }
+    }
+    &__title {
+        @include media("<tablet") {
+            margin-bottom: 50px;
+        }
+        h1 {
+            @extend %font-gloria;
+            font-size: 35px;
+            line-height: 49px;
+            color: $color-purple;
+            margin-top: 20px;
+            margin-bottom: initial;
+            &::before {
+                content: url("/images/content/elements/bg-title-blue-m.svg");
+                position: absolute;
+                top: 4px;
+                left: 183px;
+                z-index: -1;
+                transform: translateX(-100%);
+            }
+
+            @include media(">=small") {
+                margin-top: initial;
+                font-size: 35px;
+                line-height: 49px;
+            }
+
+            @include media(">=tablet") {
+                font-size: 55px;
+                line-height: 59px;
+                position: relative;
+                &::before {
+                    content: url("/images/content/elements/bg-title-blue.svg");
+                    top: -251px;
+                    left: 400px;
+                }
+            }
+        }
+
+        &__buttons {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 10px;
+            align-items: center;
+            margin-top: initial;
+
+            @include media("<small") {
+                grid-row: 3;
+            }
+
+            @include media(">=small") {
+                margin-left: auto;
+                grid-template-columns: 249px 263px;
+                grid-gap: 14px;
+            }
+
+            @include media(">=tablet") {
+                margin-top: 20px;
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include media("<tablet") {
+                    max-width: 212px;
+                    margin: 0px auto;
+                }
+                &:first-child {
+                    font-weight: 500;
+                    order: 3;
+                    svg {
+                        margin-left: 15px;
+                    }
+                    @include media(">=tablet") {
+                        order: initial;
+                        max-width: 83px;
+                        grid-column: span 2;
+                        justify-self: flex-end;
+                        &:hover {
+                            color: $color-black;
+                        }
+                    }
+                }
+                &:nth-child(2) {
+                    max-height: 49px;
+                    text-transform: inherit;
+                }
+                &:last-child {
+                    margin-left: auto;
+                    font-size: 15px;
+                    line-height: 0px;
+                    max-height: 59px;
+
+                    @include media("<tablet") {
+                        font-size: 14px;
+                        padding: 7.5px 0;
+
+                        img {
+                            height: 25px;
+                        }
+                    }
+
+                    img {
+                        margin-right: 15px;
+                    }
+                }
+
+                &:last-child {
+                    svg {
+                        margin-left: 15px;
+                        margin-top: -1px;
+
+                        path {
+                            fill: $color-black;
+                        }
+                    }
+
+                    @include media(">=tablet") {
+                        &:hover {
+                            svg {
+                                path {
+                                    fill: $color-purple;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__list {
+        margin-bottom: 32px;
+        margin-top: 8px;
+        @include media(">=tablet") {
+            grid-column: span 2;
+            margin-bottom: 54px;
+            margin-top: 70px;
+        }
+        &__item {
+            margin: 0 -20px 25px;
+            @include media(">=tablet") {
+                margin: 0 0 25px;
+            }
+            &__header {
+                padding: 25px 25px 25px 55px;
+                background-color: $color-white;
+                border-radius: 10px;
+                box-shadow: 0px 0px 36px 0px rgba(0, 0, 0, 0.1);
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                position: relative;
+                z-index: 2;
+
+                &::before {
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    width: 46px;
+                    height: calc(100% - 40px);
+                    border-right: 1px solid #979797;
+                    display: flex;
+                    align-items: center;
+                    transform: translateY(-50%);
+                    justify-content: center;
+                }
+
+                @include media(">=small") {
+                    max-width: calc(50% - 20px);
+                    flex: 1 0 50%;
+                    display: inline-flex;
+                    margin-right: 10px;
+                }
+
+                @include media(">=tablet") {
+                    max-width: 100%;
+                    flex: initial;
+                    display: flex;
+                    padding: 25px;
+                    flex-wrap: initial;
+                    margin-right: initial;
+
+                    &::before {
+                        transform: initial;
+                        position: relative;
+                        left: initial;
+                        top: initial;
+                        border-right: none;
+                        width: initial;
+                    }
+                }
+                &__title {
+                    margin-left: 10px;
+                    margin-bottom: 0px;
+                    font-weight: 700;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+
+                    &::before {
+                        margin-right: 17px;
+                    }
+
+                    @include media(">=tablet") {
+                        margin-left: 21px;
+                        padding-left: 21px;
+
+                        &::after {
+                            content: "";
+                            display: block;
+                            height: 100%;
+                            width: 1px;
+                            background: #979797;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                        }
+                    }
+                }
+                &__buttons {
+                    display: none;
+                    width: 100%;
+                    margin-left: auto;
+                    padding-left: 10px;
+
+                    @include media(">=tablet") {
+                        display: flex;
+                        width: initial;
+                        padding-left: initial;
+                    }
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-top: 10px;
+                        font-size: 11px;
+
+                        @include media(">=tablet") {
+                            margin-top: auto;
+                            margin-right: 9px;
+
+                            &.edit {
+                                width: 146px;
+                            }
+
+                            &.trash {
+                                width: 158px;
+                            }
+
+                            &.view {
+                                width: 160px;
+                            }
+
+                            &:last-child {
+                                margin-right: initial;
+                            }
+                        }
+
+                        i {
+                            font-size: 16px;
+                            margin-right: 8px;
+                        }
+
+                        &.view {
+                            i {
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+            &__footer {
+                display: block;
+                margin-top: 25px;
+                width: 100vw;
+                @include media(">=small") {
+                    display: none;
+                }
+                &__buttons {
+                    a {
+                        width: 173px;
+                        margin: 0px auto 10px;
+                        @include media("<small") {
+                            &:last-child {
+                                margin-bottom: initial;
+                            }
+                        }
+                    }
+                }
+            }
+            &__body {
+                padding: 54px 0 25px 0;
+                background-color: $color-white;
+                border-radius: 10px;
+                box-shadow: 0px 0px 36px 0px rgba(0, 0, 0, 0.1);
+                align-items: flex-start;
+                flex-wrap: wrap;
+                position: relative;
+                z-index: 1;
+                margin-top: -30px;
+                overflow-x: hidden;
+                @include media(">=small") {
+                    padding: 61px 31px 25px 45px;
+                }
+                h3 {
+                    font-size: 24px;
+                    font-weight: 900;
+                    color: $primary;
+                    margin-left: 24px;
+                    @include media(">=small") {
+                        margin-top: 15px;
+                        font-size: 30px;
+                        margin-left: initial;
+                    }
+                }
+                &__bar {
+                    width: 100vw;
+                    overflow-x: scroll;
+                    @include media(">=small") {
+                        width: 100%;
+                    }
+                    ul {
+                        display: flex;
+                        justify-content: space-between;
+                        list-style: none;
+                        position: relative;
+                        z-index: 2;
+                        counter-reset: item-point;
+                        width: 100%;
+                        position: relative;
+                        &::before {
+                            content: "";
+                            display: block;
+                            width: 830px;
+                            height: 3px;
+                            background-color: $color-gray;
+                            position: absolute;
+                            top: 22px;
+                            left: 50px;
+                            z-index: 1;
+                            @include media(">=small") {
+                                width: calc(100% - 150px);
+                                left: 50%;
+                                transform: translateX(-50%);
+                            }
+                        }
+                    }
+                    &__item {
+                        max-width: 119px;
+                        text-align: center;
+                        margin: 0px auto;
+                        counter-increment: item-point;
+                        position: relative;
+                        z-index: 2;
+                        @include media("<tablet") {
+                            flex: 1 0 120px;
+                        }
+                        a,
+                        button {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 90px;
+                            height: 25px;
+                            border-radius: 20px;
+                            font-size: 12px;
+                            font-weight: 900;
+                            margin: 0px auto 5px;
+                            color: $color-white;
+                            text-transform: uppercase;
+                            &.group-alert {
+                                width: initial;
+                                height: initial;
+                                border-radius: initial;
+                                border: 0px none;
+                                font-size: 12px;
+                                color: $color-white;
+                                line-height: 16px;
+                                padding: 2px 6px 3px;
+                                background-color: $vermelho;
+                                text-transform: uppercase;
+                                margin-top: -15px;
+                                &::before {
+                                    display: none;
+                                }
+                                @include media(">=tablet") {
+                                    &:hover {
+                                        background-color: $vermelho;
+                                    }
+                                }
+                            }
+                            &.groups-view {
+                                color: $color-white;
+                                background-color: $verde;
+                            }
+                            &.groups-participate {
+                                color: $color-white;
+                                background-color: $azul;
+                            }
+                            &.groups-spy,
+                            &.groups-card {
+                                color: $color-black;
+                                border: 1px solid rgba(0, 0, 0, 0.25);
+                                background: transparent;
+                                text-transform: initial;
+                                transition: 0.3s ease-in-out;
+                                svg {
+                                    margin-right: 5px;
+                                }
+                                @include media(">=tablet") {
+                                    &:hover {
+                                        svg {
+                                            g {
+                                                fill: $color-white;
+                                                transition: 0.3s ease-in-out;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &:last-child {
+                                margin-bottom: initial;
+                            }
+                            @include media(">=tablet") {
+                                &:hover {
+                                    text-decoration: none;
+                                    background-color: $secundary !important;
+                                    border-color: $secundary !important;
+                                    color: $color-white !important;
+                                }
+                            }
+                        }
+                        div {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin: 0px auto 4px;
+                            position: relative;
+                        }
+                        p {
+                            font-size: 13px;
+                            line-height: 14px;
+                            font-weight: 900;
+                            margin-bottom: 20px;
+                        }
+                        &:nth-child(1),
+                        &:nth-child(2) {
+                            &::before {
+                                content: url("/images/steps/01.svg");
+                            }
+                        }
+                        &:nth-child(3),
+                        &:nth-child(4) {
+                            &::before {
+                                content: url("/images/steps/02.svg");
+                            }
+                        }
+                        &:nth-child(5),
+                        &:nth-child(6) {
+                            &::before {
+                                content: url("/images/steps/03.svg");
+                            }
+                        }
+                        &:nth-child(7) {
+                            &::before {
+                                content: url("/images/steps/04.svg");
+                            }
+                        }
+                        &:nth-child(8) {
+                            &::before {
+                                content: url("/images/steps/premiacao.svg");
+                            }
+                        }
+                    }
+                }
+            }
+            &--pending {
+                .groups__list__item__header {
+                    &::before {
+                        content: url("/images/circle-await.svg");
+                    }
+
+                    .groups__list__item__header__title {
+                        &::before {
+                            content: url("/images/project-await.svg");
+                        }
+                    }
+                }
+            }
+
+            &--success {
+                .groups__list__item__header {
+                    &::before {
+                        content: url("/images/circle-completed.svg");
+                    }
+
+                    .groups__list__item__header__title {
+                        &::before {
+                            content: url("/images/groups-purple.svg");
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .btn.disabled {
+        opacity: 1;
+    }
+}

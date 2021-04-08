@@ -1,0 +1,247 @@
+// imported from criativos WP
+header#header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transition: all 0.5s ease;
+    @include media("<tablet") {
+        background: url("/images/bg-header-m.svg") no-repeat top right;
+    }
+    &.header--fixed {
+        position: fixed;
+    }
+    &.header--inview {
+        transform: translateY(0);
+    }
+    &.header--outview {
+        transform: translateY(calc(-100% - 30px));
+    }
+    .logo {
+        display: initial;
+    }
+    .logo-white {
+        display: none;
+    }
+    &.active {
+        @include media("<tablet") {
+            .logo {
+                display: none;
+            }
+            .logo-white {
+                display: initial;
+            }
+        }
+    }
+    &.purple {
+        @include media("<tablet") {
+            background: url("/images/bg-header-purple-m.svg") no-repeat top
+                right;
+        }
+        @include media(">=tablet") {
+            .container {
+                background-color: $secundary !important;
+                &::after {
+                    background-color: $secundary !important;
+                }
+            }
+        }
+    }
+    .header__back {
+        text-align: right;
+        padding: 0px !important;
+        margin-right: 20px;
+        @include media("<tablet") {
+            display: none;
+        }
+        a {
+            height: 34px;
+            text-transform: initial;
+            display: inline-flex;
+            align-items: center;
+            padding: 0px 26px !important;
+            width: initial !important;
+            color: $color-white;
+            border-color: $color-white;
+        }
+    }
+    .container {
+        @include media(">=tablet") {
+            padding: 20px 0;
+            background-color: $vermelho;
+            position: relative;
+            &::after {
+                content: "";
+                width: 25vw;
+                height: 100%;
+                background-color: $vermelho;
+                position: absolute;
+                top: 0;
+                right: 0;
+                transform: translateX(100%);
+                z-index: -1;
+            }
+        }
+    }
+    .row {
+        @include media(">=tablet") {
+            flex-wrap: initial;
+        }
+    }
+    .header-nav {
+        @include media(">=tablet") {
+            padding: 0px;
+            margin-left: auto;
+            display: flex !important;
+            max-width: initial;
+            flex: initial;
+            align-items: center;
+        }
+    }
+    .brand {
+        @include media(">=tablet") {
+            position: relative;
+            z-index: 2;
+            &::after {
+                content: url("/images/bg-header.svg");
+                position: absolute;
+                z-index: -1;
+                top: 93px;
+                left: -80px;
+                transform: translateY(-100%);
+            }
+        }
+        img {
+            &:first-child {
+                max-height: 68px;
+            }
+            &.dfc {
+                width: 112px;
+                margin-left: 30px;
+            }
+        }
+    }
+    .nav {
+        .menu-item {
+            padding: 0;
+            margin-right: 20px;
+            &:last-child {
+                margin-right: 0px;
+                .nav-link {
+                    color: $color-black;
+                    background-color: $color-yellow;
+                    border: 0px none;
+                    max-height: 43px;
+                    padding: 10px 39px;
+                    @include media(">=tablet") {
+                        &:hover {
+                            background-color: $color-white;
+                        }
+                    }
+                }
+            }
+            .nav-link {
+                color: $color-white;
+                text-transform: uppercase;
+                font-weight: 700;
+                background-color: transparent;
+                position: relative;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    height: 100%;
+                    background-color: #ffffff;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                    transition: all 0.25s ease;
+                }
+                &:not(.nav-link--bordered):hover {
+                    &:before {
+                        width: 100%;
+                    }
+                }
+                &--bordered {
+                    border: solid 2px $secundary;
+                    border-radius: 20px;
+                    font-size: 14px;
+                    padding: 8px 21px;
+                    &:hover {
+                        color: $color-white;
+                        background-color: $secundary;
+                    }
+                }
+            }
+            &:last-child {
+                padding-right: 0;
+            }
+            &.current-menu-item,
+            &.current-menu-parent {
+                .nav-link {
+                    &:before {
+                        width: 100%;
+                    }
+                }
+            }
+            .dropdown-menu {
+                border-radius: 0;
+                border: 0;
+                padding: 0;
+                .menu-item {
+                    padding: 0;
+                    margin-right: 0px;
+                    .dropdown-item {
+                        background-color: $primary;
+                        padding: 5px;
+                        border-bottom: solid 1px #fff;
+                        color: #ffffff;
+                        text-align: center;
+                        font-weight: 700;
+                        transition: all 0.25s ease;
+                        &:hover {
+                            background-color: $secundary;
+                        }
+                    }
+                    &:last-child {
+                        .dropdown-item {
+                            border-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.ativo {
+        top: 0;
+    }
+}
+
+.acessivel_navbar {
+    position: relative;
+    z-index: 9;
+}
+
+.home {
+    header#header {
+        background-color: transparent;
+        &.ativo {
+            background-color: $verde;
+        }
+    }
+}
+
+.single-inscricao-data {
+    header#header {
+        .nav {
+            .menu-item#menu-item-17 {
+                .nav-link {
+                    &:before {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon_calendario</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Cabeçalho-Inscrição-V2" transform="translate(-908.000000, -375.000000)">
+            <g id="Inscrição-texto">
+                <g id="Data" transform="translate(908.000000, 213.000000)">
+                    <g id="icon_calendario" transform="translate(0.000000, 162.000000)">
+                        <g id="Group-4">
+                            <rect id="Retângulo_3" fill="#FFC828" fill-rule="nonzero" x="0" y="0" width="60" height="60"></rect>
+                            <g id="Group-2" transform="translate(13.000000, 12.000000)">
+                                <rect id="Retângulo_11" fill="#E84056" fill-rule="nonzero" x="4" y="6" width="33" height="9"></rect>
+                                <image id="Camada_9" x="0" y="0" width="35" height="35" xlink:href="data:image/png;base64,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"></image>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

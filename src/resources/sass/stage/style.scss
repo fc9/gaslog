@@ -1,0 +1,27 @@
+@import "../general/stage/style";
+// @import "utils/breakpoints";
+// @import "utils/variables";
+// @import "utils/fonts";
+// @import "utils/extends";
+// @import 'utils/animations';
+// @import "autoload/bootstrap";
+
+// @import "base/reset";
+// @import "base/global";
+// @import "base/mobile";
+// @import "base/layout";
+// @import "components/header";
+// @import "components/footer";
+// @import "components/button";
+// @import "components/formulario";
+// @import "components/modal";
+// @import "components/box-repeater";
+@import "pages/login";
+@import "pages/create";
+@import "pages/forgot-password";
+@import "pages/reset-password";
+@import "pages/projects";
+@import "pages/subscription";
+@import "pages/groups";
+@import "pages/missions";
+@import "pages/admin";

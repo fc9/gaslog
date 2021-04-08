@@ -1,0 +1,880 @@
+.missao {
+    padding-top: 30px;
+    overflow-x: hidden;
+    @include media(">=tablet") {
+        padding-top: 112px;
+        background: url("/images/content/elements/bg-insc2.svg")
+            calc(100% + 740px) 150px no-repeat;
+    }
+    &__title {
+        position: relative;
+        @include media(">=tablet") {
+            padding-left: 181px;
+        }
+
+        &::before {
+            content: url("/images/content/elements/bg-insc-header-m.svg");
+            position: absolute;
+            top: -13px;
+            right: -20px;
+            z-index: -1;
+            @include media(">=tablet") {
+                content: url("/images/content/elements/bg-insc-header.svg");
+                right: initial;
+                left: calc((-100vw + 1083px) / 2);
+                z-index: 1;
+            }
+        }
+        h2 {
+            @extend %font-gloria;
+            font-size: 34px;
+            line-height: 41px;
+            max-width: 336px;
+            margin-bottom: 18px;
+            @include media(">=tablet") {
+                color: $primary;
+                font-size: 60px;
+                line-height: 70px;
+            }
+        }
+        h4 {
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 0px;
+            text-transform: uppercase;
+            @include media(">=tablet") {
+                font-weight: 900;
+                font-size: 22px;
+            }
+        }
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: flex-end;
+        @include media(">=tablet") {
+            grid-template-columns: auto max-content;
+            grid-gap: 35px;
+        }
+    }
+    &__content {
+        background-color: $color-yellow;
+        position: relative;
+        padding: 12px 30px 31px 20px;
+        margin: 0 -20px;
+        @include media(">=tablet") {
+            padding: 32px 90px 40px 180px;
+            margin: initial;
+            &::before {
+                content: "";
+                width: 50vw;
+                height: 100%;
+                background-color: $color-yellow;
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                transform: translateX(-100%);
+            }
+        }
+        &::after {
+            content: url("/images/content/elements/balls-purple-m.svg");
+            position: absolute;
+            top: -90px;
+            right: 6px;
+            z-index: 1;
+            @include media(">=tablet") {
+                content: url("/images/content/elements/balls-purple.svg");
+                top: -33px;
+                right: initial;
+                left: -15px;
+            }
+        }
+        p {
+            font-size: 16px;
+            line-height: 27px;
+            margin-bottom: 30px;
+            @include media(">=tablet") {
+                font-size: 24px;
+                line-height: 34px;
+            }
+            &:last-child {
+                margin-bottom: initial;
+            }
+        }
+    }
+    &__help {
+        padding-bottom: 68px;
+        position: relative;
+        z-index: 2;
+        @include media(">=tablet") {
+            margin-right: 75px;
+            width: 219px;
+            margin-top: initial;
+        }
+        h3 {
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: 25px;
+            line-height: 38px;
+            position: relative;
+            margin-bottom: 55px;
+            margin-left: 40px;
+            margin-top: 30px;
+            @include media(">=tablet") {
+                margin-top: initial;
+                margin-left: initial;
+            }
+            &::after {
+                content: url("/images/content/elements/help-mission-m.svg");
+                position: absolute;
+                top: -63px;
+                left: -80px;
+                z-index: -1;
+                @include media(">=tablet") {
+                    content: url("/images/content/elements/help-mission.svg");
+                    top: -73px;
+                    right: -13px;
+                    left: initial;
+                }
+            }
+            span {
+                display: block;
+                font-size: 30px;
+                line-height: 11px;
+            }
+        }
+        a {
+            margin: 20px auto 0px;
+            @include media(">=tablet") {
+                max-width: 161px;
+                margin: 20px 0 0px;
+            }
+        }
+    }
+    .subscription__project {
+        transform: initial;
+    }
+
+    .titulo {
+        display: table;
+        background-color: $amarelo;
+        padding-right: 20px;
+        line-height: 1.3;
+        position: relative;
+        padding-top: 10px;
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: 50vw;
+            height: 100%;
+            background-color: $amarelo;
+            right: 0;
+            top: 0;
+            z-index: -1;
+        }
+    }
+
+    &__go {
+        align-self: flex-start;
+        margin-top: 89px;
+    }
+
+    .filtro {
+        h4 {
+            position: relative;
+            margin-bottom: 25px;
+
+            &:before {
+                content: "";
+                position: absolute;
+                width: 50%;
+                max-width: 350px;
+                height: 3px;
+                background-color: $amarelo;
+                left: 30%;
+                bottom: 0;
+            }
+        }
+
+        .nav_missoes {
+            li {
+                flex-basis: 0;
+                flex-grow: 1;
+                padding: 0 30px;
+
+                .btn {
+                    background-color: $verde;
+                    font-weight: 900;
+                    font-size: 23px;
+                    padding: 15px 10px;
+                    width: 100%;
+                    cursor: pointer;
+                    border-radius: 0;
+                    text-align: left;
+                    position: relative;
+
+                    &:hover {
+                        background-color: $azul;
+                    }
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        width: calc(100% + 24px);
+                        height: calc(100% + 14px);
+                        left: -17px;
+                        top: -7px;
+                        border: solid 2px $primary;
+                        pointer-events: none;
+                        transition: all 0.25s ease;
+                    }
+
+                    &.active {
+                        background-color: $azul;
+
+                        &:after {
+                            left: -40px;
+                        }
+                    }
+                }
+
+                &:first-child {
+                    padding-left: 0;
+                }
+
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+
+    .loader {
+        position: absolute;
+        width: 100%;
+    }
+
+    .dados_missao {
+        position: relative;
+        top: 0;
+        opacity: 1;
+        transition: all 0.25s ease;
+        h3 {
+            margin-bottom: 35px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        &.carregando {
+            top: 20px;
+            opacity: 0;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-color: #fff;
+        }
+
+        .tit_missao {
+            display: table;
+            position: relative;
+            margin-bottom: 30px;
+            padding: 15px 0;
+
+            &:before {
+                content: "";
+                width: 32px;
+                height: 68px;
+                background-color: $primary;
+                position: absolute;
+                left: -20px;
+                top: 0;
+            }
+
+            @include media(">=tablet") {
+                &:before {
+                    width: 50vw;
+                    height: 100%;
+                    left: initial;
+                    right: calc(100% + 30px);
+                }
+            }
+
+            h2 {
+                font-size: 32px;
+                font-weight: 900;
+
+                @include media(">=tablet") {
+                    font-size: 45px;
+                }
+            }
+
+            h4 {
+                font-size: 16px;
+                font-weight: 900;
+
+                @include media(">=tablet") {
+                    font-size: 22px;
+                }
+            }
+
+            h2,
+            h4 {
+                margin-left: 24px;
+
+                @include media(">=tablet") {
+                    margin-left: 0px;
+                }
+            }
+        }
+
+        b,
+        strong {
+            color: $primary;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+
+            li {
+                margin-bottom: 45px;
+
+                &:last-child {
+                    margin-bottom: initial;
+                }
+            }
+        }
+
+        .cont {
+            width: 100%;
+            max-width: 440px;
+            position: relative;
+
+            &--space {
+                p {
+                    margin-bottom: 25px;
+                    font-size: 16px;
+
+                    @include media(">=tablet") {
+                        margin-bottom: 45px;
+                    }
+                }
+            }
+        }
+
+        .slider_dicas {
+            .slide {
+                padding: 0 10px;
+                position: relative;
+
+                a {
+                    outline: none !important;
+                }
+
+                .foto {
+                    width: 100%;
+                    height: 220px;
+                    background-color: black;
+                    display: table;
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: calc(100% - 20px);
+                        top: 10px;
+                        left: 0;
+                        background-color: $azul;
+                        z-index: -1;
+                    }
+
+                    &.video {
+                        background-color: #4e4e4e;
+                        background-blend-mode: multiply;
+
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            width: 37px;
+                            height: 37px;
+                            background-image: url("/images/play.svg");
+                            background-size: cover;
+                            background-position: center;
+                            top: 50%;
+                            left: 50%;
+                            transform: translateY(-50%) translateX(-50%);
+                        }
+                    }
+                }
+            }
+
+            .slick-dots {
+                bottom: -35px;
+
+                li {
+                    width: 15px;
+                    text-align: center;
+
+                    button {
+                        width: 12px;
+                        height: 12px;
+                        background-color: #e0e4ee;
+                        border-radius: 50%;
+                        opacity: 1;
+
+                        &:before {
+                            display: none;
+                        }
+                    }
+
+                    &.slick-active {
+                        button {
+                            background-color: $secundary;
+                        }
+                    }
+                }
+            }
+        }
+
+        .tit_dica {
+            display: table;
+            background-color: $primary;
+            color: #ffffff;
+            line-height: 72px;
+            padding-right: 90px;
+            padding-left: 15px;
+            margin-left: -20px;
+            position: relative;
+            margin-bottom: 40px;
+            margin-top: -1rem;
+            padding-bottom: 0px;
+
+            &:before {
+                content: "";
+                position: absolute;
+                width: 84%;
+                height: 3px;
+                background-color: $secundary;
+                left: 97px;
+                bottom: 10px;
+            }
+
+            @include media(">=tablet") {
+                margin-top: initial;
+                margin-left: -15px;
+
+                &:before {
+                    width: 100%;
+                    left: 50px;
+                }
+            }
+
+            h2 {
+                margin-left: 12px;
+
+                @include media(">=tablet") {
+                    margin-left: initial;
+                }
+            }
+        }
+    }
+}
+
+//INSCRIÇÃO
+
+.inscricao {
+    margin-top: 0px;
+
+    @include media(">=tablet") {
+        margin-top: 77px;
+    }
+
+    small {
+        display: block;
+    }
+
+    .titulo-insc {
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+        margin-bottom: 28px;
+        margin-left: 30px;
+        @include media(">=tablet") {
+            align-items: center;
+            margin-left: initial;
+            margin-bottom: 78px;
+        }
+
+        &:before {
+            content: url("/images/content/elements/bg-insc-green-m.svg");
+            position: absolute;
+            top: -26px;
+            left: -200px;
+            z-index: -1;
+            @include media(">=tablet") {
+                content: url("/images/content/elements/bg-insc-green.svg");
+                top: -26px;
+                left: 150px;
+                transform: translateX(-100%);
+            }
+        }
+
+        h2 {
+            @extend %font-gloria;
+            color: $secundary;
+            font-size: 32px;
+            line-height: 38px;
+            margin-left: 28px;
+            max-width: 451px;
+            @include media(">=tablet") {
+                font-size: 50px;
+                line-height: 72px;
+                margin-left: 46px;
+            }
+        }
+        img {
+            max-width: 50px;
+            margin-top: 27px;
+            @include media(">=tablet") {
+                max-width: initial;
+                margin-top: initial;
+            }
+        }
+    }
+
+    .form_padrao {
+        width: 100%;
+        max-width: 585px;
+        margin: 0px auto;
+        label {
+            font-size: 16px;
+            line-height: 19px;
+            @include media(">=tablet") {
+                font-size: 20px;
+                line-height: 24px;
+            }
+            small {
+                font-size: 14px;
+            }
+        }
+        .form-group {
+            margin-bottom: 23px;
+        }
+        &__submit {
+            background-color: $secundary;
+            display: inline-block;
+            width: auto;
+        }
+    }
+
+    .check {
+        label {
+            font-size: 16px;
+            line-height: 22px;
+        }
+        a {
+            font-weight: 900;
+            color: $primary;
+        }
+    }
+}
+
+//CTA RECOMPENSAS
+
+.cta_recompensas {
+    position: relative;
+    overflow: hidden;
+
+    @include media("<tablet") {
+        background-color: #ffffff;
+    }
+
+    @include media(">=tablet") {
+        &:before {
+            content: "";
+            position: absolute;
+            width: 65%;
+            height: calc(100% - 120px);
+            background-color: #ffffff;
+            top: 60px;
+            right: 0;
+            z-index: -1;
+        }
+    }
+
+    .foto {
+        position: relative;
+
+        @include media("<tablet") {
+            margin-top: -50px;
+        }
+
+        img {
+            position: relative;
+            z-index: 2;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: 45%;
+            height: 75%;
+            bottom: -22px;
+            left: -22px;
+            background-color: $verde;
+            z-index: 1;
+        }
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    .texto {
+        max-width: 420px;
+        position: relative;
+
+        a {
+            color: $primary;
+            font-weight: 900;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: 100vw;
+            height: 3px;
+            background-color: $verde;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+//SINGLE PÁGINAS
+
+.conteudo_pagina {
+    margin-top: 34px;
+    @include media("<tablet") {
+        margin-left: -20px;
+        margin-right: -20px;
+        background-color: $color-yellow;
+    }
+    &__grid {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        @include media(">=tablet") {
+            grid-gap: 20px;
+            grid-template-columns: auto 592px;
+            grid-gap: 33px;
+        }
+    }
+    .artigo {
+        background-color: $color-yellow;
+        padding-top: 22px;
+        padding-bottom: 30px;
+        @include media(">=tablet") {
+            padding-top: 50px;
+            padding-bottom: 70px;
+            grid-column: 2;
+            grid-row: 1;
+            &::before {
+                content: "";
+                background-color: $color-yellow;
+                width: 68vw;
+                height: 100%;
+                position: absolute;
+                top: 0px;
+                right: calc((-100vw + 1083px) / 2);
+                z-index: -1;
+            }
+        }
+        &::after {
+            content: url("/images/content/elements/se-liga-m.svg");
+            position: absolute;
+            top: -148px;
+            right: 170px;
+            z-index: 1;
+            transform: translateX(100%);
+            @include media(">=tablet") {
+                content: url("/images/content/elements/se-liga.svg");
+                top: -188px;
+                right: 30px;
+            }
+        }
+        h2 {
+            @extend %font-gloria;
+            color: $secundary;
+            font-size: 34px;
+            line-height: 50px;
+            margin-bottom: 20px;
+            max-width: 221px;
+            padding: 0 40px !important;
+            @include media(">=tablet") {
+                font-size: 50px;
+                line-height: 72px;
+                max-width: initial;
+                padding: initial !important;
+            }
+        }
+        p {
+            font-size: 16px;
+            line-height: 30px;
+            margin-bottom: 30px;
+            max-width: 372px;
+            padding: 0 25vw 0 20px;
+            @include media(">=tablet") {
+                padding: initial;
+            }
+            &:last-child {
+                margin-bottom: initial;
+            }
+        }
+    }
+    &__video {
+        width: 100%;
+        max-width: 100vw;
+        display: block;
+        position: relative;
+        @include media(">=tablet") {
+            width: 530px;
+            min-height: 338px;
+            padding-left: 62px;
+            grid-column: 1;
+            grid-row: 1;
+        }
+        &--bar {
+            padding-bottom: 40px;
+            position: relative;
+            @include media(">=tablet") {
+                &::after {
+                    content: "";
+                    display: block;
+                    margin: 0px auto;
+                    width: 100px;
+                    height: 3px;
+                    background-color: $primary;
+                    position: absolute;
+                    bottom: 0px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+
+        .slick-dots {
+            position: relative;
+            display: flex;
+            list-style: none;
+            width: 100%;
+            z-index: 4;
+            margin-top: 8px;
+            margin-left: 20px;
+            @include media(">=tablet") {
+                margin-left: initial;
+            }
+            li {
+                width: 15px;
+                text-align: center;
+                margin-right: 3.5px;
+                &:last-child {
+                    margin-right: 0px;
+                }
+
+                button {
+                    width: 12px;
+                    height: 12px;
+                    background-color: transparent;
+                    border-radius: 50%;
+                    opacity: 1;
+                    font-size: 0px;
+                    outline: none;
+                    border: 1px solid $primary;
+
+                    &:before {
+                        display: none;
+                    }
+                }
+
+                &.slick-active {
+                    button {
+                        background-color: $primary;
+                    }
+                }
+            }
+        }
+
+        .slick-arrow {
+            @include media("<tablet") {
+                display: none !important;
+            }
+            position: absolute;
+            bottom: -6px;
+            right: 0px;
+            appearance: none;
+            background-color: transparent;
+            border: 0px none;
+            width: 45px;
+            height: 45px;
+            background-color: $primary;
+            color: $color-yellow;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            z-index: 4;
+            transition: 0.3s ease-in-out;
+            outline: none;
+            &.slick-prev {
+                right: 53px;
+                transform: rotate(180deg);
+            }
+            @include media(">=tablet") {
+                &:hover {
+                    background-color: $color-white;
+                    color: $primary;
+                }
+            }
+        }
+
+        a {
+            border: 4px solid $primary;
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                width: 61px;
+                height: 61px;
+                background-image: url("/images/play-yellow.svg");
+                background-size: cover;
+                background-position: center;
+                top: 50%;
+                left: 50%;
+                transform: translateY(-50%) translateX(-50%);
+                // @include media(">=tablet") {
+                //     top: calc(50% - 20px);
+                //     left: calc(50% + 20px);
+                // }
+            }
+        }
+
+        .video {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,47 @@
+/** Import Bootstrap functions */
+@import "../../../../../node_modules/bootstrap/scss/functions";
+
+$color-white: #ffffff;
+$color-black: #000000;
+$color-bg: #f4f4f4;
+$color-border: #dadada;
+$color-purple: #7b3b83;
+$color-purple2: #882d8e;
+$color-yellow: #ffd339;
+$color-pink: #e64561;
+$color-green: #b7cf44;
+$color-red: #f5644b;
+$color-blue: #5cc2de;
+$color-blue2: #c4caeb;
+$color-blue3: #55c7df;
+$color-black80: RGBA(0, 0, 0, 0.8);
+$color-gray: #d8d8d8;
+$color-gray2: #7f7f7f;
+
+$space-content: 1083px;
+$space-content2: 735px;
+
+// Variaveis WP
+$primary: #ec4359;
+$secundary: #882d8e;
+$verde: #bfd541;
+$vermelho: #ec4359;
+$amarelo: #ffd339;
+$azul: #55c7df;
+$cinza: #f4f4f4;
+
+$theme-colors: (
+    primary: $primary,
+    secundary: $secundary
+);
+
+/** Bootstrap navbar fix (https://git.io/fADqW) */
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;
+
+$cubic: cubic-bezier(1, 0, 0.25, 1);
+
+$desktop: "only screen and (min-width : 1200px)";
+$tablet: "only screen and (max-width : 992px)";
+$celular: "only screen and (max-width : 768px)";
+$minCelular: "only screen and (max-width : 320px)";

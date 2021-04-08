@@ -1,0 +1,381 @@
+.projects {
+    padding-bottom: 50px;
+
+    &__header {
+        background: $color-green;
+        margin-bottom: 16px;
+
+        @include media(">=small") {
+            margin-bottom: 26px;
+        }
+
+        @include media(">=tablet") {
+            margin-bottom: 76px;
+        }
+
+        &__wrapper {
+            padding: 19px 0;
+
+            @include media(">=small") {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        &__logo {
+            height: 48px;
+            margin: 0px auto 19px;
+            display: block;
+
+            @include media(">=small") {
+                height: 95px;
+                margin: initial;
+            }
+        }
+
+        &__site {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 387px;
+            margin-left: auto;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 11px;
+
+            @include media(">=small") {
+                font-size: 16px;
+            }
+
+            i {
+                margin-right: 15px;
+            }
+        }
+    }
+
+    &__body {
+        &__top {
+            display: grid;
+            grid-template-columns: 1fr;
+
+            @include media("<small") {
+                grid-template-areas: "Botoes" "Titulo";
+            }
+
+            @include media(">=small") {
+                display: flex;
+                align-items: center;
+            }
+
+            @include media(">=tablet") {
+                display: flex;
+            }
+
+            h1 {
+                font-size: 35px;
+                line-height: 49px;
+                font-weight: 900;
+                color: $color-purple;
+                margin-top: 20px;
+
+                @include media("<small") {
+                    grid-area: Titulo;
+                }
+
+                @include media(">=small") {
+                    margin-top: initial;
+                    font-size: 35px;
+                    line-height: 49px;
+                }
+
+                @include media(">=tablet") {
+                    font-size: 45px;
+                    line-height: 59px;
+                }
+            }
+
+            &__buttons {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-gap: 10px;
+                align-items: center;
+                margin-top: initial;
+
+                @include media("<small") {
+                    grid-area: Botoes;
+                }
+
+                @include media(">=small") {
+                    margin-left: auto;
+                    grid-template-columns: 298px 83px;
+                    grid-gap: 20px;
+                }
+
+                @include media(">=tablet") {
+                    margin-top: 20px;
+                }
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    &:first-child {
+                        margin-left: auto;
+                        font-size: 15px;
+                        line-height: 0px;
+
+                        @include media("<tablet") {
+                            font-size: 14px;
+                            padding: 7.5px 0;
+
+                            img {
+                                height: 25px;
+                            }
+                        }
+
+                        img {
+                            margin-right: 15px;
+                        }
+                    }
+
+                    &:last-child {
+                        svg {
+                            margin-left: 15px;
+                            margin-top: -1px;
+
+                            path {
+                                fill: $color-black;
+                            }
+                        }
+
+                        @include media(">=tablet") {
+                            &:hover {
+                                svg {
+                                    path {
+                                        fill: $color-purple;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &__list {
+            &__title {
+                margin-bottom: 25px;
+
+                &:first-child {
+                    margin-top: 31px;
+                }
+
+                &.second {
+                    margin-top: 40px;
+                }
+            }
+
+            &__item {
+                padding: 25px 25px 25px 55px;
+                background-color: $color-white;
+                border-radius: 10px;
+                box-shadow: 0px 0px 36px 0px rgba(0, 0, 0, 0.1);
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                flex-wrap: wrap;
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    width: 46px;
+                    height: calc(100% - 40px);
+                    border-right: 1px solid #979797;
+                    display: flex;
+                    align-items: center;
+                    transform: translateY(-50%);
+                    justify-content: center;
+                }
+
+                @include media(">=small") {
+                    max-width: calc(50% - 20px);
+                    flex: 1 0 50%;
+                    display: inline-flex;
+                    margin-right: 10px;
+                }
+
+                @include media(">=tablet") {
+                    max-width: 100%;
+                    flex: initial;
+                    display: flex;
+                    padding: 25px;
+                    flex-wrap: initial;
+                    margin-right: initial;
+
+                    &::before {
+                        transform: initial;
+                        position: relative;
+                        left: initial;
+                        top: initial;
+                        border-right: none;
+                        width: initial;
+                    }
+                }
+
+                &__title {
+                    margin-left: 10px;
+                    margin-bottom: 0px;
+                    font-weight: 700;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+
+                    &::before {
+                        margin-right: 17px;
+                    }
+
+                    @include media(">=tablet") {
+                        margin-left: 21px;
+                        padding-left: 21px;
+
+                        &::after {
+                            content: "";
+                            display: block;
+                            height: 100%;
+                            width: 1px;
+                            background: #979797;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                        }
+                    }
+                }
+
+                &__buttons {
+                    display: block;
+                    width: 100%;
+                    margin-left: auto;
+                    padding-left: 10px;
+
+                    @include media(">=tablet") {
+                        display: flex;
+                        width: initial;
+                        padding-left: initial;
+                    }
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-top: 10px;
+
+                        @include media(">=tablet") {
+                            margin-top: auto;
+
+                            &.edit {
+                                width: 146px;
+                            }
+
+                            &.trash {
+                                width: 158px;
+                            }
+
+                            &.view {
+                                width: 173px;
+                            }
+
+                            &:last-child {
+                                margin-left: 9px;
+                            }
+                        }
+
+                        i {
+                            font-size: 16px;
+                            margin-right: 8px;
+                        }
+
+                        &.view {
+                            i {
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+
+                &__status {
+                    margin-left: 22px;
+                    margin-top: 20px;
+                    position: relative;
+                    display: none;
+
+                    @include media(">=tablet") {
+                        padding-left: 22px;
+                        margin-top: initial;
+                        display: block;
+                    }
+
+                    p {
+                        font-size: 14px;
+
+                        @include media(">=tablet") {
+                            &::before {
+                                content: "";
+                                display: block;
+                                height: 100%;
+                                width: 1px;
+                                background: #979797;
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                            }
+                        }
+
+                        strong {
+                            font-size: 16px;
+                            display: block;
+                        }
+                    }
+                }
+
+                &--pending {
+                    &::before {
+                        content: url("/images/circle-await.svg");
+                    }
+
+                    .projects__body__list__item__title {
+                        &::before {
+                            content: url("/images/project-await.svg");
+                        }
+                    }
+
+                    .projects__body__list__item__status {
+                        strong {
+                            color: $color-red;
+                        }
+                    }
+                }
+
+                &--success {
+                    &::before {
+                        content: url("/images/circle-completed.svg");
+                    }
+
+                    .projects__body__list__item__title {
+                        &::before {
+                            content: url("/images/project-completed.svg");
+                        }
+                    }
+
+                    .projects__body__list__item__status {
+                        strong {
+                            color: $color-green;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

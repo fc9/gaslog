@@ -1,0 +1,33 @@
+.admin {
+
+    &__dropdown-header {
+
+        a {
+            color: $color-purple !important;
+        }
+    }
+
+    &__header {
+
+        a {
+            color: rgba(0,0,0,0.87);
+        }
+    }
+
+    &__sidebar {
+
+        .sidebar__item-brand {
+            padding-top: 15px;
+        }
+
+        .sidebar__item {
+
+            .collapsible-accordion {
+
+                .sidebar__link {
+                    padding: 0 32px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="62px" height="62px" viewBox="0 0 62 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Play</title>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="09---Mssao" transform="translate(-473.000000, -2499.000000)">
+            <g id="Se-liga" transform="translate(239.000000, 2142.000000)">
+                <g id="video" transform="translate(0.000000, 224.000000)">
+                    <g id="Play" transform="translate(234.372727, 133.163636)">
+                        <circle id="Oval" fill="#FFD339" cx="30.4545455" cy="30.5" r="30"></circle>
+                        <path d="M40.2414478,28.9539602 L26.5642809,21.1718645 C25.4530111,20.5398731 23.7511364,21.1531665 23.7511364,22.7163169 L23.7511364,38.2767686 C23.7511364,39.6791165 25.3325588,40.5242648 26.5642809,39.8212211 L40.2414478,32.042865 C41.4615132,31.3510401 41.4653988,29.6457851 40.2414478,28.9539602 Z" id="play" fill="#EC4359" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

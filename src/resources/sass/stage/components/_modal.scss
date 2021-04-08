@@ -1,0 +1,165 @@
+.modal {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: 0.2s ease-in-out;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    &-concurso {
+        .modal__wrapper {
+            max-width: 515px;
+            @include media("<tablet") {
+                padding: 45px 28px;
+            }
+        }
+        p {
+            color: $color-black !important;
+            strong {
+                color: $color-purple !important;
+            }
+        }
+        a,
+        button {
+            min-height: 50px;
+            max-height: initial;
+            margin: 0px auto;
+            line-height: initial !important;
+        }
+        @include media(">=tablet") {
+            a {
+                max-width: 356px;
+            }
+            button {
+                max-width: 134px;
+            }
+        }
+    }
+
+    &__generic {
+        &__content {
+            margin: 20px 0;
+            color: $color-red;
+
+            li {
+                margin-bottom: 10px;
+
+                &:last-child {
+                    margin-bottom: initial;
+                }
+            }
+        }
+
+        &--groups {
+            .modal__wrapper {
+                padding: 45px 50px;
+            }
+
+            p {
+                color: $color-black;
+                font-weight: 700;
+
+                strong {
+                    font-weight: 700;
+                    color: $primary !important;
+                }
+            }
+
+            button {
+                max-width: 152px;
+                margin: 0px auto;
+            }
+        }
+    }
+
+    &--active {
+        opacity: 1;
+        z-index: 99999;
+    }
+
+    &__close {
+        @include media(">=tablet") {
+            &:hover {
+                background: $color-purple;
+                border-color: $color-purple;
+                color: $color-white;
+            }
+        }
+    }
+
+    &__ok {
+        grid-column: span 2;
+        height: 40px;
+
+        @include media(">=tablet") {
+            height: 50px;
+        }
+    }
+
+    &__wrapper {
+        background: $color-white;
+        padding: 45px 58px;
+        border-radius: 20px;
+        text-align: center;
+        max-width: 475px;
+
+        p {
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 700;
+            margin-bottom: 40px;
+
+            strong {
+                color: $color-pink;
+            }
+        }
+    }
+
+    &__buttons {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+
+        @include media(">=tablet") {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 27px;
+        }
+        &--column {
+            grid-template-columns: 1fr;
+            grid-gap: 13px;
+        }
+        i {
+            margin-right: 20px;
+            margin-left: -10px;
+
+            &.icon-seta-lado {
+                transform: rotate(180deg);
+            }
+        }
+
+        .btn {
+            line-height: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal__close,
+        .modal__cancel {
+            line-height: initial;
+        }
+    }
+
+    &__finish-subscription {
+        .btn {
+            line-height: initial;
+        }
+    }
+}

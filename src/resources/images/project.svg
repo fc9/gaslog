@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="33px" viewBox="0 0 32 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 3</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="02---Meus-Projetos" transform="translate(-888.000000, -206.000000)">
+            <g id="Inscrever-novo-projeto" transform="translate(860.000000, 194.000000)">
+                <g id="Group-3" transform="translate(29.000000, 13.000000)">
+                    <path d="M16,0 L26,0 C28.209139,0 30,1.790861 30,4 L30,19 C30,21.209139 28.209139,23 26,23 L16,23 C13.790861,23 12,21.209139 12,19 L12,4 C12,1.790861 13.790861,0 16,0 Z" id="Retângulo_Arredondado_2" stroke="#000000" stroke-width="2" fill="#F1F3F9"></path>
+                    <path d="M10,4 L20,4 C22.209139,4 24,5.790861 24,8 L24,23 C24,25.209139 22.209139,27 20,27 L10,27 C7.790861,27 6,25.209139 6,23 L6,8 C6,5.790861 7.790861,4 10,4 Z" id="Retângulo_Arredondado_2-2" stroke="#000000" stroke-width="2" fill="#F1F3F9"></path>
+                    <g id="Agrupar_2" transform="translate(0.000000, 6.000000)">
+                        <path d="M4,2 L14,2 C16.209139,2 18,3.790861 18,6 L18,21 C18,23.209139 16.209139,25 14,25 L4,25 C1.790861,25 0,23.209139 0,21 L0,6 C0,3.790861 1.790861,2 4,2 Z" id="Retângulo_Arredondado_2-3" stroke="#000000" stroke-width="2" fill="#F1F3F9"></path>
+                        <rect id="Retângulo_Arredondado_2-4" fill="#FFC828" fill-rule="nonzero" style="mix-blend-mode: multiply;" x="3" y="0" width="18" height="23" rx="4"></rect>
+                        <line x1="4" y1="10" x2="10" y2="10" id="Forma_6" stroke="#000000" stroke-width="2" fill="#FFC828" stroke-linecap="round"></line>
+                        <line x1="4" y1="14" x2="14" y2="14" id="Forma_6-2" stroke="#000000" stroke-width="2" fill="#FFC828" stroke-linecap="round"></line>
+                        <path d="M4,18 L7,18 M10.275,18 L14,18" id="Forma_6-3" stroke="#000000" stroke-width="2" fill="#FFC828" stroke-linecap="round"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

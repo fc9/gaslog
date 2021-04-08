@@ -1,0 +1,89 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    width: 100%;
+    background: $color-bg;
+    font-size: 14px;
+    line-height: 17px;
+
+    @include media(">=tablet") {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+#etapa .container {
+    padding: 0px 20px;
+
+    @include media(">=tablet") {
+        max-width: $space-content;
+        margin: 0px auto;
+    }
+}
+
+main {
+    &.spaced {
+        margin-bottom: 155px;
+    }
+}
+
+.limit-grid {
+    padding: 0px 20px;
+
+    @include media(">=tablet") {
+        max-width: $space-content;
+        margin: 0px auto;
+        padding: 0px;
+    }
+}
+
+.limit-grid2 {
+    @include media(">=tablet") {
+        max-width: $space-content2;
+        margin: 0px auto;
+    }
+}
+
+a {
+    color: $color-black;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+
+    @include media(">=tablet") {
+        &:hover {
+            color: $color-purple;
+        }
+    }
+
+    &.primary {
+        color: $color-purple;
+
+        @include media(">=tablet") {
+            &:hover {
+                color: $color-black;
+            }
+        }
+    }
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.form-group__error__msg {
+    display: none;
+    color: $color-red;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+.form-group__error__msg.active {
+    display: block;
+}

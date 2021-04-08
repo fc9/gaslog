@@ -1,0 +1,32 @@
+input,
+textarea {
+    font-family: 'Roboto', sans-serif;
+    appearance: none;
+    outline: none;
+    width: 100%;
+    border: 1px solid $color-border;
+    background-color: $color-white;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    resize: none;
+
+    @include media('>=tablet') {
+        padding: 16px 27px;
+    }
+
+    &:focus {
+        background-color: $color-yellow;
+        border-color: $color-yellow;
+        transition: .3s ease-in-out;
+        box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, .1);
+    }
+
+    &:read-only {
+        opacity: 0.5;
+    }
+}
+
+button {
+    font-size: 1rem;
+}
